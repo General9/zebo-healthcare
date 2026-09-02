@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <Link href="/" className="shrink-0" onClick={() => setIsMenuOpen(false)}>
-          <Image src="/logo.png" alt="Zebo Healthcare" width={477} height={223} className="h-10 w-auto" priority />
+          <Image src="/logo.jpeg" alt="Zebo Healthcare" width={882} height={431} className="h-10 w-auto" priority />
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-zinc-700 md:flex">
           {navItems.map((item) => (

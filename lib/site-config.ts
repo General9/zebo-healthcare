@@ -3,7 +3,7 @@
 // keep them as literal placeholders (grep-able) rather than guessing real values.
 
 export const siteConfig = {
-  tradingName: "Zebo Healthcare Limited",
+  tradingName: "Zebo Healthcare Services",
 
   /** Never render a CQC/regulator badge or "CQC-registered" claim — see brief §2 & §7. */
   cqcStatus: "CQC registration in progress",
