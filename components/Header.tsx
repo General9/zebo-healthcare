@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import EnquiryCta from "@/components/EnquiryCta";
 
 const navItems = [
@@ -19,9 +18,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-1">
         <Link href="/" className="shrink-0" onClick={() => setIsMenuOpen(false)}>
-          <Image src="/logo.jpeg" alt="Zebo Healthcare" width={882} height={431} className="h-10 w-auto" priority />
+          {/* eslint-disable-next-line @next/next/no-img-element -- next/image's optimizer doesn't support SVG without dangerouslyAllowSVG */}
+          <img src="/logo.svg" alt="Zebo Healthcare" width={1080} height={763} className="h-32 w-auto" />
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-zinc-700 md:flex">
           {navItems.map((item) => (
