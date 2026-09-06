@@ -1,4 +1,5 @@
-// The 7 service lines from Website brief.pdf §3, in the brief's table order.
+// The service lines from Website brief.pdf §3 (plus Supported Living, added
+// later per Website content.docx), in that order.
 // `audience` drives which CTA a service page/card renders: "family" pages get
 // the client enquiry CTA, the "b2b" page (Care Homes) gets the staffing CTA —
 // per the brief's explicit instruction that these must never share a CTA.
@@ -42,6 +43,19 @@ export const services: Service[] = [
       "A Typical Day",
       "Cost Guidance",
       "Live-in Care vs. a Care Home",
+    ],
+  },
+  {
+    slug: "supported-living",
+    name: "Supported Living",
+    positioning:
+      "Tailored support for young adults and adults to live as independently as possible in their own home or shared accommodation.",
+    audience: "family",
+    ctaLabel: "Enquire Now",
+    keyContent: [
+      "What's Included",
+      "Who It's For",
+      "How to Arrange It",
     ],
   },
   {

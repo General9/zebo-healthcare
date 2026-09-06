@@ -35,7 +35,7 @@ const values = [
 const whatWeOffer: { text: string; slug?: string }[] = [
   { text: "Adult Personal Care: help at home with daily living, from a few hours a week to full-time support.", slug: "adult-personal-care" },
   { text: "Live-in Care: round-the-clock companionship and care in the comfort of your own home.", slug: "live-in-care" },
-  { text: "Supported Living: tailored support for young adults and adults to live as independently as possible in their own home or shared accommodation." },
+  { text: "Supported Living: tailored support for young adults and adults to live as independently as possible in their own home or shared accommodation.", slug: "supported-living" },
   { text: "Children's Services: specialist, family-centred support for children with additional needs.", slug: "childrens-services" },
   { text: "Learning Disabilities: person-centred support that promotes independence and community life.", slug: "learning-disabilities" },
   { text: "Care Homes (Staffing Supply): reliable, vetted care staff supplied to care home operators.", slug: "care-homes" },
