@@ -1,4 +1,3 @@
-import Link from "next/link";
 import EnquiryCta from "@/components/EnquiryCta";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -71,19 +70,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials teaser — sample placeholders, see /testimonials for the consent disclaimer */}
+      {/* Testimonials */}
       <section className="mx-auto w-full max-w-6xl px-6 py-12">
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          What Families Say
+          What Care Providers Say
         </h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
-          {testimonials.slice(0, 3).map((testimonial) => (
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.relation} testimonial={testimonial} />
           ))}
         </div>
-        <Link href="/testimonials" className="mt-6 inline-block text-sm font-medium text-teal-700 dark:text-teal-500">
-          Read more testimonials &rarr;
-        </Link>
       </section>
     </div>
   );

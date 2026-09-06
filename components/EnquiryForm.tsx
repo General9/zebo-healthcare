@@ -138,10 +138,6 @@ export default function EnquiryForm() {
             . *
           </span>
         </label>
-        <label className="flex items-start gap-3 text-sm text-zinc-700 dark:text-zinc-300">
-          <input type="checkbox" name="marketingOptIn" className="mt-1 h-4 w-4" />
-          <span>I&apos;d also like to receive occasional news and updates by email.</span>
-        </label>
       </div>
 
       <button

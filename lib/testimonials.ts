@@ -1,8 +1,4 @@
-// Sample/placeholder testimonials — NOT real client reviews.
-// Brief §7 & §11: testimonials require documented consent before publishing,
-// and no identifying details for children's/vulnerable-adult services without
-// written parental/guardian consent. Replace every entry here with a real,
-// consented testimonial before launch — do not publish this file as-is.
+// Real, client-supplied testimonials for the homepage.
 
 export interface Testimonial {
   quote: string;
@@ -13,32 +9,14 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "The carers treat my mother with such patience and respect. She looks forward to their visits, which says everything.",
-    attribution: "Sample testimonial",
-    relation: "Daughter of an Adult Personal Care client",
+      "We have been extremely impressed with the professionalism, efficiency and responsiveness of the service. The team consistently demonstrates a strong understanding of the demands of residential care and has proven exceptionally reliable, particularly when we have required staffing support at short notice.\n\nYour ability to respond quickly to last-minute shift requirements, whilst maintaining high standards and professionalism, has provided our home with valuable reassurance and continuity. The staff are committed, flexible and consistently willing to go above and beyond to support the needs of the service.\n\nWhat particularly stands out is the combination of excellent service, reliability and competitive pricing. They offer a genuinely professional and responsive staffing solution without compromising on quality. We have developed a high level of confidence in their service and would readily recommend them to other care providers looking for a dependable staffing partner.",
+    attribution: "Levina",
+    relation: "Manager, children's home in Surrey",
   },
   {
     quote:
-      "Having a live-in carer meant Dad could stay in his own home. The whole family felt reassured knowing someone was always there.",
-    attribution: "Sample testimonial",
-    relation: "Family member of a Live-in Care client",
-  },
-  {
-    quote:
-      "Our son's support worker understands his needs completely. The safeguarding-led approach gave us real peace of mind.",
-    attribution: "Sample testimonial",
-    relation: "Parent, Children's Services",
-  },
-  {
-    quote:
-      "The team filled our weekend shifts at short notice without ever compromising on the quality of care our residents receive.",
-    attribution: "Sample testimonial",
-    relation: "Care home manager, staffing supply",
-  },
-  {
-    quote:
-      "During a difficult time, the palliative care team were compassionate, professional, and coordinated closely with our GP throughout.",
-    attribution: "Sample testimonial",
-    relation: "Family member, Palliative Care",
+      "We have used several agencies for our staffing needs and none of them compare to Zebo. There are times when life happens and it cannot be helped that we need agency staff to step in and make sure our children are safeguarded. Zebo staff members come highly trained and engage with our children in a way that other agencies have failed to do for us in the past. I would recommend Zebo Healthcare to any children's home that require competent and well trained staff!",
+    attribution: "Sidney",
+    relation: "Deputy Manager, children's home in Surrey",
   },
 ];
