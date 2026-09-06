@@ -8,7 +8,7 @@ const navItems = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/areas-we-cover", label: "Areas We Cover" },
-  { href: "/careers", label: "Careers" },
+  { href: "/working-with-us", label: "Working With Us" },
   { href: "/contact", label: "Contact" },
 ];
 
