@@ -1,6 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import ContentSection from "@/components/ContentSection";
-import EnquiryCta from "@/components/EnquiryCta";
+import StaffRegistrationForm from "@/components/StaffRegistrationForm";
 
 export const metadata = { title: "Work With Zebo Healthcare | Zebo Healthcare" };
 
@@ -79,20 +79,13 @@ export default function WorkingWithUsPage() {
         </p>
       </ContentSection>
 
-      <ContentSection heading="Current vacancies">
-        <p>Live vacancy listings are a future enhancement — see Open Question 3 (brief §13).</p>
-      </ContentSection>
-
       <ContentSection heading="Register your interest">
         <p>
-          Interested in joining us? Fill in our short registration form below and a member of our
-          recruitment team will be in touch. The full quick-registration form (fields in brief
-          §6.2 — role, right to work, DBS status, CV upload, etc.) is a separate build once Open
-          Questions 2 &amp; 6 are answered, and must route to a dedicated recruitment inbox,
-          separate from client enquiries, per brief §6. For now:
+          Interested in joining us? Fill in the short form below and a member of our recruitment
+          team will be in touch.
         </p>
-        <div className="mt-4">
-          <EnquiryCta href="/working-with-us" label="Register Your Interest" />
+        <div className="mt-6">
+          <StaffRegistrationForm />
         </div>
       </ContentSection>
     </div>
