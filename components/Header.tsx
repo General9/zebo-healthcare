@@ -20,7 +20,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-1">
         <Link href="/" className="shrink-0" onClick={() => setIsMenuOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element -- next/image's optimizer doesn't support SVG without dangerouslyAllowSVG */}
-          <img src="/logo.svg" alt="Zebo Healthcare" width={1080} height={763} className="h-16 w-auto md:h-32" />
+          <img src="/logo.svg" alt="Zebo Healthcare" width={1080} height={763} className="h-16 w-auto md:h-36" />
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-zinc-700 md:flex">
           {navItems.map((item) => (
