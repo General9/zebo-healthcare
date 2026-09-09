@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import ContentSection from "@/components/ContentSection";
 import EnquiryCta from "@/components/EnquiryCta";
 import { siteConfig } from "@/lib/site-config";
-import { services, getServiceBySlug } from "@/lib/services";
+import { services } from "@/lib/services";
 
 export const metadata = { title: "About Zebo Healthcare | Zebo Healthcare" };
 
@@ -31,15 +31,6 @@ const values = [
     description:
       "Our people are the heart of what we do. We invest in our people's growth and wellbeing, because great care starts with great support.",
   },
-];
-
-const whatWeOffer: { text: string; slug?: string }[] = [
-  { text: "Adult Personal Care: help at home with daily living, from a few hours a week to full-time support.", slug: "adult-personal-care" },
-  { text: "Live-in Care: round-the-clock companionship and care in the comfort of your own home.", slug: "live-in-care" },
-  { text: "Supported Living: tailored support for young adults and adults to live as independently as possible in their own home or shared accommodation.", slug: "supported-living" },
-  { text: "Children's Services: specialist, family-centred support for children with additional needs.", slug: "childrens-services" },
-  { text: "Learning Disabilities: person-centred support that promotes independence and community life.", slug: "learning-disabilities" },
-  { text: "Care Homes (Staffing Supply): reliable, vetted care staff supplied to care home operators.", slug: "care-homes" },
 ];
 
 export default function AboutPage() {
@@ -85,26 +76,6 @@ export default function AboutPage() {
         </ul>
       </ContentSection>
 
-      <ContentSection heading="What we offer">
-        <p>Our services are organised around the different stages and circumstances of life:</p>
-        <ul className="mt-2 list-disc space-y-1 pl-5">
-          {whatWeOffer.map((item) => {
-            const service = item.slug ? getServiceBySlug(item.slug) : undefined;
-            return (
-              <li key={item.text}>
-                {service ? (
-                  <Link href={`/services/${service.slug}`} className="text-teal-700 hover:underline dark:text-teal-500">
-                    {item.text}
-                  </Link>
-                ) : (
-                  item.text
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </ContentSection>
-
       <ContentSection heading="Why choose us">
         <p>
           We are small enough to know the people we support by name, and structured enough to
@@ -114,11 +85,21 @@ export default function AboutPage() {
         </p>
       </ContentSection>
 
-      <ContentSection heading="Accreditations & regulator status">
+      <ContentSection heading="Regulator status">
         <p>{siteConfig.cqcStatus}.</p>
       </ContentSection>
 
-      <div className="mx-auto max-w-6xl px-6 py-8">
+      <div className="mx-auto w-full max-w-3xl px-6 pt-8">
+        <p className="text-zinc-600 dark:text-zinc-400">
+          Ready to talk about care for yourself or a loved one? Get in touch with our friendly
+          team today for a no-obligation conversation.
+        </p>
+        <div className="mt-4">
+          <EnquiryCta href="/contact" label="Enquire Now" />
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6 py-8 pb-16">
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">Our services</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
@@ -139,16 +120,6 @@ export default function AboutPage() {
               <p className="p-3 text-sm font-medium text-zinc-900 dark:text-zinc-50">{service.name}</p>
             </Link>
           ))}
-        </div>
-      </div>
-
-      <div className="mx-auto w-full max-w-3xl px-6 pb-16">
-        <p className="text-zinc-600 dark:text-zinc-400">
-          Ready to talk about care for yourself or a loved one? Get in touch with our friendly
-          team today for a no-obligation conversation.
-        </p>
-        <div className="mt-4">
-          <EnquiryCta href="/contact" label="Enquire Now" />
         </div>
       </div>
     </div>
