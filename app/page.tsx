@@ -1,6 +1,7 @@
 import EnquiryCta from "@/components/EnquiryCta";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import ValueIcon from "@/components/ValueIcon";
 import { services } from "@/lib/services";
 import { siteConfig, formatCoverageAreas } from "@/lib/site-config";
 import { testimonials } from "@/lib/testimonials";
@@ -62,7 +63,8 @@ export default function Home() {
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {coreValues.map((value) => (
               <div key={value.title} className="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-black">
-                <h3 className="text-lg font-semibold text-teal-700 dark:text-teal-500">{value.title}</h3>
+                <ValueIcon icon={value.icon} />
+                <h3 className="mt-4 text-lg font-semibold text-teal-700 dark:text-teal-500">{value.title}</h3>
                 <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{value.description}</p>
               </div>
             ))}
