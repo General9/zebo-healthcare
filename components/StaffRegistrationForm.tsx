@@ -58,19 +58,19 @@ export default function StaffRegistrationForm() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field label="Full name" htmlFor="staffFullName" required>
+        <Field label="Full name" htmlFor="staffFullName">
           <input id="staffFullName" name="fullName" type="text" required className={inputClass} />
         </Field>
 
-        <Field label="Phone number" htmlFor="staffPhone" required>
+        <Field label="Phone number" htmlFor="staffPhone">
           <input id="staffPhone" name="phone" type="tel" required className={inputClass} />
         </Field>
 
-        <Field label="Email address" htmlFor="staffEmail" required>
+        <Field label="Email address" htmlFor="staffEmail">
           <input id="staffEmail" name="email" type="email" required className={inputClass} />
         </Field>
 
-        <Field label="Role / discipline" htmlFor="role" required>
+        <Field label="Role / discipline" htmlFor="role">
           <select id="role" name="role" required defaultValue="" className={inputClass}>
             <option value="" disabled>
               Select a role
@@ -83,7 +83,7 @@ export default function StaffRegistrationForm() {
           </select>
         </Field>
 
-        <Field label="Years of care experience" htmlFor="experience" required>
+        <Field label="Years of care experience" htmlFor="experience">
           <select id="experience" name="experience" required defaultValue="" className={inputClass}>
             <option value="" disabled>
               Select one
@@ -95,7 +95,7 @@ export default function StaffRegistrationForm() {
           </select>
         </Field>
 
-        <Field label="Areas willing to work in / postcode" htmlFor="areas" required>
+        <Field label="Areas willing to work in / postcode" htmlFor="areas">
           <input id="areas" name="areas" type="text" required className={inputClass} />
         </Field>
       </div>
@@ -112,7 +112,7 @@ export default function StaffRegistrationForm() {
 
       <fieldset>
         <legend className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
-          Right to work in the UK <span aria-hidden="true">*</span>
+          Right to work in the UK
         </legend>
         <div className="mt-2 flex flex-wrap gap-6 text-sm text-zinc-700 dark:text-zinc-300">
           <label className="flex items-center gap-2">
@@ -132,7 +132,7 @@ export default function StaffRegistrationForm() {
 
       <fieldset>
         <legend className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
-          Availability <span aria-hidden="true">*</span>
+          Availability
         </legend>
         <div className="mt-2 flex flex-wrap gap-6 text-sm text-zinc-700 dark:text-zinc-300">
           {availabilityOptions.map((option) => (
@@ -149,7 +149,7 @@ export default function StaffRegistrationForm() {
 
       <fieldset>
         <legend className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
-          Current DBS check status <span aria-hidden="true">*</span>
+          Current DBS check status
         </legend>
         <div className="mt-2 flex flex-wrap gap-6 text-sm text-zinc-700 dark:text-zinc-300">
           <label className="flex items-center gap-2">
@@ -175,7 +175,7 @@ export default function StaffRegistrationForm() {
             <Link href="/policies/privacy-policy" className="text-teal-700 underline hover:no-underline">
               privacy notice
             </Link>
-            . *
+            .
           </span>
         </label>
       </div>
@@ -196,18 +196,16 @@ const inputClass =
 function Field({
   label,
   htmlFor,
-  required,
   children,
 }: {
   label: string;
   htmlFor: string;
-  required?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <div>
       <label htmlFor={htmlFor} className="block text-sm font-medium text-zinc-900 dark:text-zinc-50">
-        {label} {required && <span aria-hidden="true">*</span>}
+        {label}
       </label>
       {children}
     </div>

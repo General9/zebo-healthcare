@@ -49,11 +49,11 @@ export default function EnquiryForm() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field label="Full name" htmlFor="fullName" required>
+        <Field label="Full name" htmlFor="fullName">
           <input id="fullName" name="fullName" type="text" required className={inputClass} />
         </Field>
 
-        <Field label="Relationship to person needing care" htmlFor="relationship" required>
+        <Field label="Relationship to person needing care" htmlFor="relationship">
           <select id="relationship" name="relationship" required defaultValue="" className={inputClass}>
             <option value="" disabled>
               Select one
@@ -64,15 +64,15 @@ export default function EnquiryForm() {
           </select>
         </Field>
 
-        <Field label="Phone number" htmlFor="phone" required>
+        <Field label="Phone number" htmlFor="phone">
           <input id="phone" name="phone" type="tel" required className={inputClass} />
         </Field>
 
-        <Field label="Email address" htmlFor="email" required>
+        <Field label="Email address" htmlFor="email">
           <input id="email" name="email" type="email" required className={inputClass} />
         </Field>
 
-        <Field label="Service enquiring about" htmlFor="service" required>
+        <Field label="Service enquiring about" htmlFor="service">
           <select id="service" name="service" required defaultValue="" className={inputClass}>
             <option value="" disabled>
               Select a service
@@ -86,11 +86,11 @@ export default function EnquiryForm() {
           </select>
         </Field>
 
-        <Field label="Location / postcode" htmlFor="postcode" required>
+        <Field label="Location / postcode" htmlFor="postcode">
           <input id="postcode" name="postcode" type="text" required className={inputClass} />
         </Field>
 
-        <Field label="When is care needed?" htmlFor="urgency" required>
+        <Field label="When is care needed?" htmlFor="urgency">
           <select id="urgency" name="urgency" required defaultValue="" className={inputClass}>
             <option value="" disabled>
               Select one
@@ -135,7 +135,7 @@ export default function EnquiryForm() {
             <Link href="/policies/privacy-policy" className="text-teal-700 underline hover:no-underline">
               privacy notice
             </Link>
-            . *
+            .
           </span>
         </label>
       </div>
@@ -156,18 +156,16 @@ const inputClass =
 function Field({
   label,
   htmlFor,
-  required,
   children,
 }: {
   label: string;
   htmlFor: string;
-  required?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <div>
       <label htmlFor={htmlFor} className="block text-sm font-medium text-zinc-900 dark:text-zinc-50">
-        {label} {required && <span aria-hidden="true">*</span>}
+        {label}
       </label>
       {children}
     </div>
