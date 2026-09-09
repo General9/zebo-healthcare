@@ -8,7 +8,7 @@ export const siteConfig = {
   /** Never render a CQC/regulator badge or "CQC-registered" claim — see brief §2 & §7. */
   cqcStatus: "CQC registration in progress",
 
-  coverageAreas: ["Surrey", "Bedfordshire", "Buckinghamshire", "Northamptonshire", "Hampshire"],
+  coverageAreas: ["Surrey", "Bedfordshire", "Buckinghamshire", "Northamptonshire", "Hampshire", "Berkshire"],
   companyRegNumber: "17338840",
 
   contact: {
@@ -27,7 +27,7 @@ export const siteConfig = {
   },
 } as const;
 
-/** e.g. "Surrey, Bedfordshire, Buckinghamshire, Northamptonshire and Hampshire" */
+/** e.g. "Surrey, Bedfordshire, Buckinghamshire, Northamptonshire, Hampshire and Berkshire" */
 export function formatCoverageAreas(): string {
   const areas = siteConfig.coverageAreas;
   if (areas.length <= 1) return areas.join("");
