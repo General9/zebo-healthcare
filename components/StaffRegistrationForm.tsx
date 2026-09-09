@@ -132,6 +132,22 @@ export default function StaffRegistrationForm() {
 
       <fieldset>
         <legend className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
+          Can you drive?
+        </legend>
+        <div className="mt-2 flex flex-wrap gap-6 text-sm text-zinc-700 dark:text-zinc-300">
+          <label className="flex items-center gap-2">
+            <input type="radio" name="canDrive" value="yes" required className="h-4 w-4" />
+            Yes
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="radio" name="canDrive" value="no" className="h-4 w-4" />
+            No
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
           Availability
         </legend>
         <div className="mt-2 flex flex-wrap gap-6 text-sm text-zinc-700 dark:text-zinc-300">
