@@ -18,8 +18,6 @@ const rolesWeRecruitFor = [
   "Supported Living Support Workers (young adults and adults)",
   "Children's Support Workers",
   "Learning Disability Support Workers",
-  "Complex Care Assistants (including clinical tasks with training, e.g. PEG feeding, tracheostomy care)",
-  "Palliative Care Assistants",
   "Care Home Staff for supply to partner care homes (Care Assistants, Senior Carers, Nurses)",
 ];
 
@@ -36,7 +34,7 @@ export default function WorkingWithUsPage() {
     <div>
       <PageHeader
         title="Work With Zebo Healthcare"
-        intro="Join a care team that values you as much as the people you support. We are always looking for compassionate, reliable care professionals to join us across our services, from personal care, live-in care and supported living to complex care and care home staffing."
+        intro="Join a care team that values you as much as the people you support. We are always looking for compassionate, reliable care professionals to join us across our services, from personal care, live-in care and supported living to children's services and care home staffing."
       />
 
       <ContentSection heading="Why work for us">

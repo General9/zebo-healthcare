@@ -9,7 +9,7 @@ export default function ServicesOverviewPage() {
     <div>
       <PageHeader
         title="Our Services"
-        intro="Seven care service lines, each tailored to a different need."
+        intro="Six care service lines, each tailored to a different need."
       />
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

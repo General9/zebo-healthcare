@@ -39,8 +39,6 @@ const whatWeOffer: { text: string; slug?: string }[] = [
   { text: "Children's Services: specialist, family-centred support for children with additional needs.", slug: "childrens-services" },
   { text: "Learning Disabilities: person-centred support that promotes independence and community life.", slug: "learning-disabilities" },
   { text: "Care Homes (Staffing Supply): reliable, vetted care staff supplied to care home operators.", slug: "care-homes" },
-  { text: "Complex Care: clinically-led support for individuals with complex health needs.", slug: "complex-care" },
-  { text: "Palliative Care: compassionate, dignified support for individuals and families at end of life.", slug: "palliative-care" },
 ];
 
 export default function AboutPage() {
@@ -48,7 +46,7 @@ export default function AboutPage() {
     <div>
       <PageHeader
         title="About Zebo Healthcare"
-        intro="At Zebo Healthcare, we believe good care starts with really knowing someone: their routines, their preferences, and what matters most to them. We are a UK-based care provider supporting adults, children and families, delivering personal care, live-in care, supported living for young adults and adults, complex care, palliative care, children's services, learning disability support, and staffing solutions for care homes."
+        intro="At Zebo Healthcare, we believe good care starts with really knowing someone: their routines, their preferences, and what matters most to them. We are a UK-based care provider supporting adults, children and families, delivering personal care, live-in care, supported living for young adults and adults, children's services, learning disability support, and staffing solutions for care homes."
       />
 
       <ContentSection heading="Our story">

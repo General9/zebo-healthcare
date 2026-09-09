@@ -186,7 +186,7 @@ export const policies: Policy[] = [
       {
         heading: "Purpose and scope",
         paragraphs: [
-          "This policy applies to everyone who works for or on behalf of Zebo Healthcare, across all our service lines, including adult personal care, live-in care, children's services, learning disability support, complex care, palliative care, and staff supplied to care homes.",
+          "This policy applies to everyone who works for or on behalf of Zebo Healthcare, across all our service lines, including adult personal care, live-in care, children's services, learning disability support, and staff supplied to care homes.",
         ],
       },
       {

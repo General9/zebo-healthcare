@@ -97,33 +97,6 @@ export const services: Service[] = [
       "Shift Cover Process",
     ],
   },
-  {
-    slug: "complex-care",
-    name: "Complex Care",
-    positioning:
-      "Nurse-led packages for clients with clinical or long-term health needs, delivered safely at home.",
-    audience: "family",
-    ctaLabel: "Enquire Now",
-    keyContent: [
-      "Clinical & Complex Conditions Supported",
-      "Nurse-Led Oversight",
-      "Care Package Process",
-    ],
-  },
-  {
-    slug: "palliative-care",
-    name: "Palliative Care",
-    positioning:
-      "Compassionate, dignified end-of-life support for clients and their families, coordinated with clinical teams.",
-    audience: "family",
-    ctaLabel: "Enquire Now",
-    keyContent: [
-      "Compassionate End-of-Life Support",
-      "Family Support",
-      "Coordination with Hospice, District Nurses & GP",
-      "24/7 Availability",
-    ],
-  },
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {
