@@ -75,7 +75,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="mx-auto w-full max-w-6xl px-6 py-12">
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          What Care Providers Say
+          Testimonials
         </h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           {testimonials.map((testimonial) => (
