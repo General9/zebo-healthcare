@@ -51,9 +51,17 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
         />
       </div>
 
-      {service.keyContent.map((heading) => (
-        <ContentSection key={heading} heading={heading}>
-          <p>Content pending from client/copywriter (brief §11).</p>
+      {service.sections.map((section) => (
+        <ContentSection key={section.heading} heading={section.heading}>
+          {section.bullets ? (
+            <ul className="list-disc space-y-1 pl-5">
+              {section.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{section.paragraph}</p>
+          )}
         </ContentSection>
       ))}
 
