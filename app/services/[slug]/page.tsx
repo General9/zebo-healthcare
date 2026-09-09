@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import ContentSection from "@/components/ContentSection";
 import EnquiryCta from "@/components/EnquiryCta";
@@ -24,6 +25,19 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
   return (
     <div>
       <PageHeader title={service.name} intro={service.positioning} />
+
+      <div className="mx-auto max-w-3xl px-6 pt-8">
+        <div className="relative aspect-video overflow-hidden rounded-lg">
+          <Image
+            src={`/services/${service.slug}.jpg`}
+            alt={service.name}
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
 
       {service.keyContent.map((heading) => (
         <ContentSection key={heading} heading={heading}>

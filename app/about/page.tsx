@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import ContentSection from "@/components/ContentSection";
 import EnquiryCta from "@/components/EnquiryCta";
 import { siteConfig } from "@/lib/site-config";
-import { getServiceBySlug } from "@/lib/services";
+import { services, getServiceBySlug } from "@/lib/services";
 
 export const metadata = { title: "About Zebo Healthcare | Zebo Healthcare" };
 
@@ -116,6 +117,30 @@ export default function AboutPage() {
       <ContentSection heading="Accreditations & regulator status">
         <p>{siteConfig.cqcStatus}.</p>
       </ContentSection>
+
+      <div className="mx-auto max-w-6xl px-6 py-8">
+        <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">Our services</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
+              className="group block overflow-hidden rounded-lg border border-zinc-200 transition hover:border-teal-700 hover:shadow-sm dark:border-zinc-800"
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={`/services/${service.slug}.jpg`}
+                  alt={service.name}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition group-hover:scale-105"
+                />
+              </div>
+              <p className="p-3 text-sm font-medium text-zinc-900 dark:text-zinc-50">{service.name}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
 
       <div className="mx-auto w-full max-w-3xl px-6 pb-16">
         <p className="text-zinc-600 dark:text-zinc-400">

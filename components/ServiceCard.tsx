@@ -9,7 +9,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       href={`/services/${service.slug}`}
       className="block overflow-hidden rounded-lg border border-zinc-200 transition hover:border-teal-700 hover:shadow-sm dark:border-zinc-800"
     >
-      <ServiceIcon slug={service.slug} />
+      <ServiceIcon slug={service.slug} name={service.name} />
       <div className="p-6">
         <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
           {service.name}
