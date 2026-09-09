@@ -48,7 +48,7 @@ export default function AboutPage() {
         </p>
       </ContentSection>
 
-      <CoreValues />
+      <CoreValues headingClassName="text-xl font-semibold text-zinc-900 dark:text-zinc-50" />
 
       <div className="mx-auto max-w-6xl px-6 py-8 pb-16">
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">Our services</h2>
