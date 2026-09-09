@@ -32,13 +32,13 @@ export const policies: Policy[] = [
       {
         heading: "Introduction",
         paragraphs: [
-          `Zebo Healthcare Limited ("Zebo Healthcare", "we", "us", "our") is committed to protecting and respecting your privacy. This policy explains how we collect, use, store and protect personal information when you visit our website, make an enquiry about our services, or apply to work with us. This policy is written in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.`,
+          `Zebo Healthcare ("we", "us", "our") is committed to protecting and respecting your privacy. This policy explains how we collect, use, store and protect personal information when you visit our website, make an enquiry about our services, or apply to work with us. This policy is written in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.`,
         ],
       },
       {
         heading: "Who we are",
         paragraphs: [
-          "Zebo Healthcare Limited is a company registered in England and Wales (Company Number: 17338840), with its registered office at [Registered Office Address]. We are the data controller responsible for your personal data.",
+          "Zebo Healthcare is a company registered in England and Wales (Company Number: 17338840), with its registered office at [Registered Office Address]. We are the data controller responsible for your personal data.",
         ],
       },
       {
@@ -180,7 +180,7 @@ export const policies: Policy[] = [
       {
         heading: "Our commitment",
         paragraphs: [
-          "Zebo Healthcare Limited is committed to safeguarding and promoting the welfare of all children, young people and adults at risk who come into contact with our services. Safeguarding is everyone's responsibility, and we expect the same commitment from every member of staff, contractor and volunteer working with us.",
+          "Zebo Healthcare is committed to safeguarding and promoting the welfare of all children, young people and adults at risk who come into contact with our services. Safeguarding is everyone's responsibility, and we expect the same commitment from every member of staff, contractor and volunteer working with us.",
         ],
       },
       {
@@ -314,7 +314,7 @@ export const policies: Policy[] = [
       {
         heading: "Acceptance of these terms",
         paragraphs: [
-          `These Terms of Use govern your use of the Zebo Healthcare Limited website ("the Site"). By accessing or using the Site, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use the Site.`,
+          `These Terms of Use govern your use of the Zebo Healthcare website ("the Site"). By accessing or using the Site, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use the Site.`,
         ],
       },
       {
@@ -326,7 +326,7 @@ export const policies: Policy[] = [
       {
         heading: "Intellectual property",
         paragraphs: [
-          "Unless otherwise stated, all content on this Site, including text, graphics, logos and images, is owned by or licensed to Zebo Healthcare Limited and is protected by copyright and other intellectual property laws. You may view and print pages from the Site for your own personal, non-commercial use, but may not reproduce, distribute or otherwise use any content without our prior written consent.",
+          "Unless otherwise stated, all content on this Site, including text, graphics, logos and images, is owned by or licensed to Zebo Healthcare and is protected by copyright and other intellectual property laws. You may view and print pages from the Site for your own personal, non-commercial use, but may not reproduce, distribute or otherwise use any content without our prior written consent.",
         ],
       },
       {
@@ -350,7 +350,7 @@ export const policies: Policy[] = [
       {
         heading: "Limitation of liability",
         paragraphs: [
-          "To the fullest extent permitted by law, Zebo Healthcare Limited accepts no liability for any loss or damage arising from your use of, or inability to use, this Site, or from any reliance placed on its content.",
+          "To the fullest extent permitted by law, Zebo Healthcare accepts no liability for any loss or damage arising from your use of, or inability to use, this Site, or from any reliance placed on its content.",
         ],
       },
       {

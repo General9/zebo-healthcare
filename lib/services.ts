@@ -50,7 +50,7 @@ export const services: Service[] = [
       {
         heading: "How to Arrange It",
         bullets: [
-          "Contact Zebo Healthcare Limited to discuss the type and level of support required.",
+          "Contact Zebo Healthcare to discuss the type and level of support required.",
           "A needs assessment is arranged, usually involving a visit to the individual's home, to understand their routine, preferences and any risks that need to be managed.",
           "A personalised care plan is developed, setting out the tasks to be carried out and the frequency of visits.",
           "Care begins on the agreed start date, with the plan reviewed regularly and adjusted as circumstances change.",
@@ -84,10 +84,10 @@ export const services: Service[] = [
       {
         heading: "How to Arrange It",
         bullets: [
-          "Contact Zebo Healthcare Limited to discuss the individual's needs, home environment and preferences for a carer.",
+          "Contact Zebo Healthcare to discuss the individual's needs, home environment and preferences for a carer.",
           "A detailed assessment is carried out to build a full picture of daily routines, care needs and any risks to be managed.",
           "A suitable live-in carer is matched to the individual, and a personalised care plan is agreed with the individual and their family.",
-          "The live-in arrangement begins on the agreed date, with regular reviews and ongoing support from Zebo Healthcare Limited.",
+          "The live-in arrangement begins on the agreed date, with regular reviews and ongoing support from Zebo Healthcare.",
         ],
       },
     ],
@@ -118,7 +118,7 @@ export const services: Service[] = [
       {
         heading: "How to Arrange It",
         bullets: [
-          "Contact Zebo Healthcare Limited to discuss the individual's goals and the level of support being sought.",
+          "Contact Zebo Healthcare to discuss the individual's goals and the level of support being sought.",
           "An assessment is arranged to understand the individual's needs, existing skills and the areas where support would be most valuable.",
           "A support plan is agreed, setting out the goals to be worked towards and the support to be provided, including accommodation arrangements where relevant.",
           "Support begins according to the agreed plan, with progress reviewed regularly and the plan adjusted as the individual's independence develops.",
@@ -152,7 +152,7 @@ export const services: Service[] = [
       {
         heading: "How to Arrange It",
         bullets: [
-          "Contact Zebo Healthcare Limited to discuss your child's needs and the type of support you are looking for.",
+          "Contact Zebo Healthcare to discuss your child's needs and the type of support you are looking for.",
           "An assessment is arranged, involving the family and, where appropriate, the child, to understand routines, preferences and any relevant medical or care information.",
           "A support plan is developed in partnership with parents or guardians and, where relevant, other professionals involved in the child's care.",
           "Support begins according to the agreed plan, with regular reviews to ensure it continues to meet the child's needs as they grow and circumstances change.",
@@ -186,7 +186,7 @@ export const services: Service[] = [
       {
         heading: "How to Arrange It",
         bullets: [
-          "Get in touch with Zebo Healthcare Limited to discuss the support being sought, either as the individual, a family member or a referring professional.",
+          "Get in touch with Zebo Healthcare to discuss the support being sought, either as the individual, a family member or a referring professional.",
           "A member of the team will arrange an initial conversation or visit to understand needs, preferences and any relevant background information.",
           "A personalised support plan is prepared and agreed with the individual and, where appropriate, their family or representative.",
           "Support begins according to the agreed plan, with regular reviews to ensure it continues to meet the individual's needs.",
@@ -206,10 +206,10 @@ export const services: Service[] = [
         heading: "What's Included",
         bullets: [
           "Supply of trained and vetted care staff to registered care home operators, including healthcare assistants, senior carers and, where required, registered nurses.",
-          "Cover for both planned rotas and short notice absence, alongside longer term placements where a care home wishes to build a consistent staffing arrangement with Zebo Healthcare Limited.",
+          "Cover for both planned rotas and short notice absence, alongside longer term placements where a care home wishes to build a consistent staffing arrangement with Zebo Healthcare.",
           "Staff who have completed relevant mandatory training, including moving and handling, safeguarding, infection control and medication awareness.",
           "Compliance checks carried out prior to placement, including enhanced DBS clearance, right to work verification, employment references and identity checks.",
-          "A single point of contact at Zebo Healthcare Limited to coordinate bookings, confirm shift patterns and manage any changes to requirements.",
+          "A single point of contact at Zebo Healthcare to coordinate bookings, confirm shift patterns and manage any changes to requirements.",
         ],
       },
       {
@@ -220,10 +220,10 @@ export const services: Service[] = [
       {
         heading: "How to Arrange It",
         bullets: [
-          "Contact Zebo Healthcare Limited to discuss your staffing requirements, including the roles needed, shift patterns and any specific skills or experience required.",
-          "Zebo Healthcare Limited will confirm staff availability and share relevant compliance documentation for your review.",
+          "Contact Zebo Healthcare to discuss your staffing requirements, including the roles needed, shift patterns and any specific skills or experience required.",
+          "Zebo Healthcare will confirm staff availability and share relevant compliance documentation for your review.",
           "Terms are agreed, including rates and the notice period for future bookings.",
-          "Staff are placed according to the agreed schedule, with ongoing communication maintained between your home and Zebo Healthcare Limited throughout the placement.",
+          "Staff are placed according to the agreed schedule, with ongoing communication maintained between your home and Zebo Healthcare throughout the placement.",
         ],
       },
     ],
