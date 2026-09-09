@@ -2,36 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import ContentSection from "@/components/ContentSection";
-import EnquiryCta from "@/components/EnquiryCta";
-import { siteConfig } from "@/lib/site-config";
+import CoreValues from "@/components/CoreValues";
 import { services } from "@/lib/services";
 
 export const metadata = { title: "About Zebo Healthcare | Zebo Healthcare" };
-
-const values = [
-  {
-    title: "Dignity and respect",
-    description: "we treat every person we support as an individual, never as a diagnosis or a task.",
-  },
-  {
-    title: "Honesty and transparency",
-    description:
-      "Openness guides every decision we make. We earn trust through clear communication and consistently following through what we say.",
-  },
-  {
-    title: "Safety first",
-    description: "robust recruitment, training and safeguarding practices underpin everything we do.",
-  },
-  {
-    title: "Reliability",
-    description: "we show up when it matters most. Consistent, dependable support that care providers can rely on.",
-  },
-  {
-    title: "People First",
-    description:
-      "Our people are the heart of what we do. We invest in our people's growth and wellbeing, because great care starts with great support.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -65,17 +39,6 @@ export default function AboutPage() {
         </p>
       </ContentSection>
 
-      <ContentSection heading="Our values">
-        <ul className="list-disc space-y-2 pl-5">
-          {values.map((value) => (
-            <li key={value.title}>
-              <span className="font-semibold text-zinc-900 dark:text-zinc-50">{value.title}:</span>{" "}
-              {value.description}
-            </li>
-          ))}
-        </ul>
-      </ContentSection>
-
       <ContentSection heading="Why choose us">
         <p>
           We are small enough to know the people we support by name, and structured enough to
@@ -85,19 +48,7 @@ export default function AboutPage() {
         </p>
       </ContentSection>
 
-      <ContentSection heading="Regulator status">
-        <p>{siteConfig.cqcStatus}.</p>
-      </ContentSection>
-
-      <div className="mx-auto w-full max-w-3xl px-6 pt-8">
-        <p className="text-zinc-600 dark:text-zinc-400">
-          Ready to talk about care for yourself or a loved one? Get in touch with our friendly
-          team today for a no-obligation conversation.
-        </p>
-        <div className="mt-4">
-          <EnquiryCta href="/contact" label="Enquire Now" />
-        </div>
-      </div>
+      <CoreValues />
 
       <div className="mx-auto max-w-6xl px-6 py-8 pb-16">
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">Our services</h2>
