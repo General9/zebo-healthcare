@@ -1,28 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState } from "react";
 import Link from "next/link";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site-config";
+import { submitEnquiry, type EnquiryFormState } from "@/app/contact/actions";
 
-/**
- * Front-end only — fields match brief §5.1, but there's no backend wired up
- * yet (§5.2's CRM/notification routing is Open Question 2). Submitting just
- * shows the success state below; nothing is sent anywhere.
- */
+const initialState: EnquiryFormState = { status: "idle" };
+
 export default function EnquiryForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction, pending] = useActionState(submitEnquiry, initialState);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    // Honeypot: real visitors never see or fill this field, so anything in
-    // it means a bot filled it — silently drop the submission.
-    if (formData.get("company_website")) return;
-    setSubmitted(true);
-  }
-
-  if (submitted) {
+  if (state.status === "success") {
     return (
       <div className="rounded-lg border border-teal-200 bg-teal-50 p-6 dark:border-teal-900 dark:bg-teal-950/30">
         <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
@@ -41,7 +30,7 @@ export default function EnquiryForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" noValidate={false}>
+    <form action={formAction} className="space-y-6" noValidate={false}>
       {/* Honeypot — hidden from sighted and screen-reader users, left open for bots */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="company_website">Leave this field blank</label>
@@ -140,11 +129,16 @@ export default function EnquiryForm() {
         </label>
       </div>
 
+      {state.status === "error" && (
+        <p className="text-sm text-red-600 dark:text-red-400">{state.message}</p>
+      )}
+
       <button
         type="submit"
-        className="rounded-md bg-teal-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-800"
+        disabled={pending}
+        className="rounded-md bg-teal-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Submit Enquiry
+        {pending ? "Sending…" : "Submit Enquiry"}
       </button>
     </form>
   );

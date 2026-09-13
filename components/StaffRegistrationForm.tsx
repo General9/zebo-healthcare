@@ -1,37 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState, useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { submitStaffRegistration, type StaffRegistrationFormState } from "@/app/working-with-us/actions";
 
 const availabilityOptions = ["Full-time", "Part-time", "Bank / relief work"];
 
-/**
- * Front-end only — fields match brief §6.2 (CV upload excluded per request),
- * but there's no backend wired up yet (§6.3's recruitment-inbox routing is
- * Open Question 2). Submitting just shows the success state below; nothing
- * is sent anywhere.
- */
+const initialState: StaffRegistrationFormState = { status: "idle" };
+
 export default function StaffRegistrationForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction, pending] = useActionState(submitStaffRegistration, initialState);
   const [availabilityError, setAvailabilityError] = useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    // Honeypot: real visitors never see or fill this field, so anything in
-    // it means a bot filled it — silently drop the submission.
-    if (formData.get("company_website")) return;
-
     if (formData.getAll("availability").length === 0) {
+      event.preventDefault();
       setAvailabilityError(true);
       return;
     }
     setAvailabilityError(false);
-    setSubmitted(true);
   }
 
-  if (submitted) {
+  if (state.status === "success") {
     return (
       <div className="rounded-lg border border-teal-200 bg-teal-50 p-6 dark:border-teal-900 dark:bg-teal-950/30">
         <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
@@ -50,7 +42,7 @@ export default function StaffRegistrationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form action={formAction} onSubmit={handleSubmit} className="space-y-6">
       {/* Honeypot — hidden from sighted and screen-reader users, left open for bots */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="company_website_staff">Leave this field blank</label>
@@ -196,11 +188,16 @@ export default function StaffRegistrationForm() {
         </label>
       </div>
 
+      {state.status === "error" && (
+        <p className="text-sm text-red-600 dark:text-red-400">{state.message}</p>
+      )}
+
       <button
         type="submit"
-        className="rounded-md bg-teal-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-800"
+        disabled={pending}
+        className="rounded-md bg-teal-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Register Your Interest
+        {pending ? "Sending…" : "Register Your Interest"}
       </button>
     </form>
   );
