@@ -41,6 +41,8 @@ export async function submitEnquiry(
       to: RECIPIENT,
       subject: `New enquiry from ${fullName}`,
       replyTo: email,
+      heading: "New Enquiry",
+      intro: `${fullName} is enquiring about ${service} in ${postcode}.`,
       fields: [
         { label: "Full name", value: fullName },
         { label: "Relationship to person needing care", value: relationship },

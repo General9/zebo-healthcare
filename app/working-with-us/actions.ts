@@ -54,6 +54,8 @@ export async function submitStaffRegistration(
       to: RECIPIENT,
       subject: `New staff registration from ${fullName}`,
       replyTo: email,
+      heading: "New Staff Registration",
+      intro: `${fullName} (${role}) has applied to join the team.`,
       fields: [
         { label: "Full name", value: fullName },
         { label: "Phone number", value: phone },
